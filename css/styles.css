@@ -1,0 +1,116 @@
+html{
+    height: 100vh;
+    margin: auto;
+}
+a:link{
+    color: #951d6d;
+    font-weight: bold;
+}
+a:visited {
+    color: #951d6d;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #e67fc4 !important;
+    background-color: transparent;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.modal{
+    width: 75% !important;
+    margin: auto !important;
+
+}
+.btn-dark {
+    color: #fbefff;
+    background-color: #0d0106;
+    border-color: #0d0106;
+}
+
+.btn-dark:hover, .btn-dark:active {
+    color: #fbefff;
+    /* background-color: #330a25; */
+    background-color: #e67fc4 !important;
+    border-color: #330a25;
+}
+
+.forfade{
+    display: none;
+}
+.pink{
+    background-color: #d0bcd5 ;
+}
+.img-size{
+    width: 50px;
+    height: 50px;
+}
+.font-size{
+    font-size: x-large;
+}
+.crimson{
+    color: #420d30 !important;
+    background-color: #d0bcd5  !important;
+}
+.btn-color{
+    background-color: #420d30;
+    color: #fbefff;
+}
+.progress-bar-color{
+    background-color: #226ce0 !important;
+}
+.dropdown-item.active {
+    color: #d0bcd5 !important;
+    text-decoration: none;
+    background-color: #e67fc4 !important;
+}
+.dropdown-item:hover{
+    cursor: pointer;
+}
+.dropdown-menu{
+    /* background-color: #f1d9f7 !important; */
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.modal-content {
+    width: 100%;
+}
+.modal-btns {
+    color: #fbefff !important;
+}
+.modal-backdrop {
+    tabindex: -1 !important;
+}
+.fadezeft{
+    transition: opacity 500ms ease-in ;
+}
+#list1 {
+    color: #e67fc4 !important;
+}
+#list2 {
+    color: #e67fc4 !important;
+}
+#list3 {
+    color: #e67fc4 !important;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
