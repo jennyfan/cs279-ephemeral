@@ -110,8 +110,7 @@ if (ENABLE_NETWORK_LOGGING) {
 })();
 
 /////////////////////////////////////////////////////////////////////////////
-
-// Network Log submission function
+// CS279 HW2 Kiwi Log submission function
 // submits to the google form at this URL:
 // docs.google.com/forms/d/e/1FAIpQLSfWLaxSPX3k9QqQ1j4mtiHHmMdb94ZjNvshEsQuCwZP5Urj6Q/viewform
 function sendNetworkLog(
@@ -119,21 +118,22 @@ function sendNetworkLog(
     timestamp,
     label,
     data) {
-    var formid = "e/1FAIpQLSfWLaxSPX3k9QqQ1j4mtiHHmMdb94ZjNvshEsQuCwZP5Urj6Q";
-    var data = {
-        "entry.1099825492": uid,
-        "entry.1466585402": timestamp,
-        "entry.1701551613": label,
-        "entry.1644921485": data
-    };
-    var params = [];
-    for (key in data) {
-        params.push(key + "=" + encodeURIComponent(data[key]));
-    }
-    // Submit the form using an image to avoid CORS warnings.
-    (new Image).src = "https://docs.google.com/forms/d/" + formid +
-        "/formResponse?" + params.join("&");
+  var formid = "e/1FAIpQLSfWLaxSPX3k9QqQ1j4mtiHHmMdb94ZjNvshEsQuCwZP5Urj6Q";
+  var data = {
+    "entry.225068172": uid,
+    "entry.1321727508": timestamp,
+    "entry.124509316": label,
+    "entry.1063891842": data
+  };
+  var params = [];
+  for (key in data) {
+    params.push(key + "=" + encodeURIComponent(data[key]));
+  }
+  // Submit the form using an image to avoid CORS warnings.
+  (new Image).src = "https://docs.google.com/forms/d/" + formid +
+     "/formResponse?" + params.join("&");
 }
+
 
 
 //The following code is the edit googleforms.py I used to generate my function
