@@ -184,7 +184,7 @@ var startTrial = function () {//Start each trial
             break;
     }
     if(level == 5){
-        window.location.href='/ephemeral/questionnaire.html';
+        window.location.href='questionnaire.html';
     }
     else {
         title.innerText = text;

@@ -113,7 +113,7 @@ var generateModal = function (taskNum, text) {//Function to create a modal
     cancelbutton.setAttribute("type", "button");
     cancelbutton.setAttribute("class", "btn btn-lg btn-dark modal-btns");
     cancelbutton.setAttribute("data-dismiss", "modal");
-    cancelbutton.setAttribute("onclick", "window.location.href='/ephemeral/index.html'");
+    cancelbutton.setAttribute("onclick", "window.location.href='index.html'");
     cancelbutton.innerText = "Cancel";
     modalfooter.appendChild(cancelbutton);
 
