@@ -32,6 +32,7 @@ var timeToAccomplish = 0; //Variable to store the time taken to select the right
 var group = randomNum(72);//A group to start the generation with.
 var hit = 6;//Variable to count how many time the adaptation hits for 79% of practiceTrialNum and taskTrialNum
 var miss = 2;//Variable to count how many time the adaptation misses for 21% of practiceTrialNum and taskTrialNum
+var accuratePrediction = false; // NEW VARIABLE = 1 (true) if 79% algo predicts accurately, 0 (false) if not
 var adaptiveWords = [];
 var trialNum = 1;//Variable to count trials
 var level = 1;//To store current level
@@ -68,6 +69,8 @@ var adaptation = function (menuNum) {//Algorithm that returns a set word that 79
     var wordCount = 1;
     var recentFlag = false;
     var adaptedOption;
+    var accuratePrediction;
+
     if (selectionSequence.lastIndexOf(nextWord) != selectionSequence.indexOf(nextWord)) {//Repeated words
         for (var i = 0; i < selectionSequence.length - 2; i++) {
             if (selectionSequence[i] == nextWord) {
@@ -122,6 +125,7 @@ var adaptation = function (menuNum) {//Algorithm that returns a set word that 79
     switch (adaptedOption) {
         case 1:
             result.push(nextWord);
+            accuratePrediction = true;
             break;
         case 0:
             do {
@@ -130,6 +134,7 @@ var adaptation = function (menuNum) {//Algorithm that returns a set word that 79
                 var word = currentWordGroup[wordID];
             } while (word == nextWord);
             result.push(word);
+            accuratePrediction = false;
             break;
         case -1:
             result.push("Error");

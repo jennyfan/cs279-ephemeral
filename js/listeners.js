@@ -5,7 +5,7 @@ var itemClickListener = function () {//To control what happens when the user cli
     else {
         var endTime = new Date().getTime();
         timeToAccomplish = endTime - startTime;
-        $(this).trigger('log', ['timeEvent', {time: timeToAccomplish , wrongMenus: menuErrorCtr, wrongItems: itemErrorCtr}]);
+        $(this).trigger('log', ['timeEvent', {time: timeToAccomplish , wrongMenus: menuErrorCtr, wrongItems: itemErrorCtr, prediction: accuratePrediction }]);
         if ((level % 2 == 1 && trialNum >=  practiceTrialNum ) || (level % 2 == 0 && trialNum >= taskTrialNum)) {
             if (level >= 4) {
                 level++;
@@ -75,6 +75,7 @@ var menuClickListener = function(menuNum){//Click listener for the menus counts 
     {
         startTime = new Date().getTime();
         if (level == 3 || level == 4){
+          // EPHEMERAL CONDITION
             fadeItems(menuNum);
         }
     }
