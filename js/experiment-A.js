@@ -33,6 +33,7 @@ var group = randomNum(72);//A group to start the generation with.
 var hit = 6;//Variable to count how many time the adaptation hits for 79% of practiceTrialNum and taskTrialNum
 var miss = 2;//Variable to count how many time the adaptation misses for 21% of practiceTrialNum and taskTrialNum
 var accuratePrediction = false; // NEW VARIABLE = 1 (true) if 79% algo predicts accurately, 0 (false) if not
+var testCondition = 'A'; // A if Traditional First, B if Ephemeral first
 var adaptiveWords = [];
 var trialNum = 1;//Variable to count trials
 var level = 1;//To store current level

@@ -1,6 +1,7 @@
 html{
     height: 100vh;
     margin: auto;
+    font-size: large;
 }
 a:link{
     color: #951d6d;
@@ -45,8 +46,13 @@ a:hover{
     width: 50px;
     height: 50px;
 }
-.font-size{
-    font-size: x-large;
+hr {
+  margin: 24px 0;
+  height: 1px;
+  color: #333;
+}
+.footer {
+  font-size: x-small;
 }
 .crimson{
     color: #420d30 !important;

@@ -10,29 +10,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
-    <script>
-        $(function(){
-            $('[data-toggle="popover"]').popover();
-        });
-    </script>
-    <div class="container-fluid p-4 rounded" >
-        <h1 class="display-3 text-center "><strong>Ephemeral Adaptation Experiment</strong></h1>.
-    </div>
 </head>
 <body>
-<div class="container rounded p-5 text-center">
-    <div class="row text-left lead " >
-        <div class = "row font-size">
-            <p >This is an experiment to measure the effect of different menu styles on the efficiency of the menu. In this experiment, I build a mockup to the experiment in the paper <strong><a href="https://dl.acm.org/citation.cfm?doid=1518701.1518956" target="_blank">Ephemeral Adaptation: The Use of Gradual Onset to Improve Menu Selection Performance</a></strong>.</p>
 
-            <p>The anticipated <strong>time to complete</strong> this experiment is approximately <strong>15 minutes</strong>. This experiment consists of <strong>2 tasks</strong>. Each task has <strong>126 trials</strong> You will have a short practice for each task of 8 trials. After you finish the experiment you will be asked to fill a short <strong>questionnaire</strong> to gather information about your experience.</p>
+  <div class="container-fluid p-4 mt-5 rounded">
+      <h1 class="display-4 text-center"><strong>Ephemeral Adaptation Experiment</strong></h1>
+  </div>
+
+<div class="container rounded p-5 text-center">
+    <div class="row text-left lead">
+        <div class= "row">
+            <p>Welcome to the Harvard CS279 Menu Selection Test! Your contribution to our research allows us to learn more about graphical user interface, and can help improve future menu design.</p>
+
+            <p>Please read the following information carefully before proceeding.</p>
+
+            <br /><br /><br />
+
+            <p>Your participation in this research is voluntary. You are free to refuse to take part, and you may stop taking part at any time. You are free to discontinue participation in this study at any time without penalty.</p>
+
+            <p><b>What:</b> You will be shown simple tasks and instructions to finish them. We will not ask you for your name. Any data that we collect will be securely stored.</p>
+
+            <p><b>Time:</b> The duration of the test is approximately 25 minutes.</p>
+
+            <p>If you have questions about this research, you may contact <a href="mailto:hceballos@mde.harvard.edu">Humberto Ceballos</a>, <a href="mailto:jfan@mde.harvard.edu">Jenny Fan</a> or <a href="amenon@mde.harvard.edu">Arjun Menon</a>. If you have any questions about your rights or treatment as a participant in this research project, please contact Harvard University Committee on Use of Human Subjects at <a href="mailto:cuhs@harvard.edu">cuhs@harvard.edu</a>.</p>
+
+            <p>By consenting to participate, I acknowledge that I have read this consent form, agree to its contents, and agree to take part in this research.</p>
         </div>
+
         <div class="container text-center p-3">
-        <table class = "table text-center font-size">
+          <table class = "table text-center font-size">
             <tbody>
             <tr>
                 <td><img class="img-fluid img-size" src="res/time.png" alt="Time"> </td>
-                <td>15 minutes</td>
+                <td>25 minutes</td>
             </tr>
             <tr>
                 <td><img class="img-fluid img-size" src="res/task.png" alt="Task"> </td>
@@ -44,29 +54,51 @@
             </tr>
             <tr>
                 <td><img class="img-fluid img-size" src="res/quetionnaire.png"> </td>
-                <td>Questionnaire</td>
+                <td>3 questionnaires</td>
             </tr>
             </tbody>
         </table>
         </div>
-        <div class="pt-3 pb-1 pr-3 pl-3 mx-auto">
-        <p class="lead font-size "> If you wish to begin please click on <strong>Start</strong></p>
-        </div>
     </div>
-    <div class="row pt-3 ">
+
+
+    <div class="row pt-3" id="giveConsent">
       <div class="col">
-          <button type="button" class="btn btn-dark btn-block font-size p-4 rounded btn-color" id="start" onclick="window.location.href='experiment.html'">Start</button>
+          <button type="button" class="btn btn-dark btn-block font-size p-4 rounded btn-color" id="consent" onclick="$('#giveConsent').hide(); $('#startButtons').toggle(400);">I consent to participate</button>
+
       </div>
       <div class="col">
-         <button type="button" class="btn btn-dark btn-block p-4 rounded font-size btn-color" id= "cancel"  data-toggle="popover" data-placement="bottom"
-                 data-content="Thank you!">Cancel</button>
+         <button type="button" class="btn btn-dark btn-block p-4 rounded font-size btn-color" id= "cancel"  data-toggle="popover" data-placement="bottom" data-content="Thank you!">Cancel</button>
+      </div>
+    </div>
+
+
+    <div class="row pt-3" id="startButtons">
+      <div class="pt-3 pb-1 pr-3 pl-3 mx-auto">
+        <p class="lead font-size ">If you wish to begin, please click on <strong>Start</strong> on the condition you are assigned (ask the experimenter if you are unclear)</p>
+      </div>
+
+      <div class="col">
+          <button type="button" class="btn btn-dark btn-block font-size p-4 rounded btn-color" id="startA" onclick="window.location.href='experiment-A.html'">Start (A)</button>
+
+      </div>
+      <div class="col">
+          <button type="button" class="btn btn-dark btn-block font-size p-4 rounded btn-color" id="startB" onclick="window.location.href='experiment-B.html'">Start (B)</button>
       </div>
     </div>
 </div>
 
-<footer class="modal-footer font-size" >
-        <div class="alert-link">
-            <p style="color: #8E3B46">CS279</p>
-        </div>
+<footer class="modal-footer">
+    <p style="color: #8E3B46">Experiment based on <strong><a href="https://dl.acm.org/citation.cfm?doid=1518701.1518956" target="_blank">Ephemeral Adaptation: The Use of Gradual Onset to Improve Menu Selection Performance</a></strong>, code modified from <a href="https://github.com/nsakhnini/ephemeral-adaptation">Nina Sakhnini</a>. Experiment design is done by Humberto Ceballos, Jenny Fan, and Arjun Menon for the Fall 2018 CS 279 class.</p>
 </footer>
+
+
+<script>
+    $(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+    $("#startButtons").hide();
+</script>
+
+</body>
 </html>
