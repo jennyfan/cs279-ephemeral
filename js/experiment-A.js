@@ -39,7 +39,7 @@ var trialNum = 1;//Variable to count trials
 var level = 1;//To store current level
 //--------------------------------------------------------------------------------------------------------------
 $(document).ready(function () {
-    generateModal(level,"You will have 3 menus and a prompt asking you to choose an item from one of these menus.\nThis is the first task. In this task, you are given a traditional menu and asked to click an item each trial. \nThis is a practice session. You will finish " + practiceTrialNum + " trials.");
+    generateModal(level,"You will have 3 menus and a prompt asking you to choose an item from one of these menus.\nThis is the first task. In this task, you are given a menu and asked to click an item each trial. \nThis is a practice session. You will finish " + practiceTrialNum + " trials.");
     $("#infoModal").modal("show");
     $('#myprogressbar').attr('aria-valuenow', progress).css('width', progress + "%");
     wordGroups = getWordGroups(data);
