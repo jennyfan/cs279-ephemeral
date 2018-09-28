@@ -46,19 +46,19 @@ $(document).ready(function () {
     generateMenus();
     generatePrompt();
     $("#menu1").on("click", function (event) {
-        console.log("menu 1", event.target, this);
+        // console.log("menu 1", event.target, this);
         if (event.target === this) {
             menuClickListener(1);
         }
     });
     $("#menu2").on("click", function (event) {
-        console.log("menu 2", event.target, this);
+        // console.log("menu 2", event.target, this);
         if (event.target === this) {
             menuClickListener(2);
         }
     });
     $("#menu3").on("click", function (event) {
-        console.log("menu 3", event.target, this);
+        // console.log("menu 3", event.target, this);
         if (event.target === this) {
             menuClickListener(3);
         }
