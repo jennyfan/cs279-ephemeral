@@ -75,7 +75,7 @@ var menuClickListener = function(menuNum){//Click listener for the menus counts 
     {
 
         startTime = new Date().getTime();
-        if (level == 1 || level == 2){
+        if (level == 3 || level == 4){
           // EPHEMERAL CONDITION
             fadeItems(menuNum);
         }
